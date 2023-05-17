@@ -3,7 +3,7 @@ body{
   display: flex;
   justify-content: center;
   background-color: #101011;
-  font-family: 'Indie Flower', cursive;
+  font-family: Helvetica, sans-serif
 }
 
 .tela1{
@@ -13,7 +13,7 @@ body{
   position: absolute;
   padding: 1em 2em;
  
-  width: 310px;
+  width: 25%;
  
   left: 0;
   right: 0;
@@ -45,16 +45,17 @@ h1 {
 
 #peso {
   border: none;
-  width: 90%;
+  width: 85%;
   font-size: 18px;
 }
 
 #altura {
   border: none;
-  width: 90%;
+  width: 85%;
   font-size: 18px;
 }
 
+
 #resultado {
-  transform : translateY(50%);
+  transform : translateY(80%);
 }

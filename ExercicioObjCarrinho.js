@@ -18,9 +18,7 @@ adicionarProduto("Camiseta", 29.90);
 adicionarProduto("Calça Jeans", 99.90);
 adicionarProduto("Tênis", 149.90);
 
-console.log('Total itenhs carrinho ' + carrinho.totalItens); 
-
-
+console.log('Total itens carrinho ' + carrinho.totalItens); 
 
 
 for (let i = 0; i < carrinho.produtos.length; i ++) {

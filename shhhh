@@ -27,7 +27,7 @@ function atualizarTabela() {
   divProdutos.innerHTML = "";
   for (var i = 0; i < produtos.length; i++) {
     var novoElemento = document.createElement("p");
-    novoElemento.textContent = produtos[i].id + " : " + produtos[i].nome + " : "+ produtos[i].descricao + " : "+ produtos[i].valor ;
+    novoElemento.textContent =  produtos[i].nome + " : "+ produtos[i].descricao + " : "+ produtos[i].valor ;
     divProdutos.appendChild(novoElemento);
   }
 

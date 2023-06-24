@@ -1,0 +1,36 @@
+const produtos = [];
+
+function adicionarProduto() {
+  const nomeInput = document.getElementById('valor1');
+  const descricaoInput = document.getElementById('valor2');
+  const valorInput = document.getElementById('valor3');
+
+  const nome = nomeInput.value;
+  const descricao = descricaoInput.value;
+  const valor = valorInput.value;
+
+  if (nome && descricao && valor) {
+    const novoProduto = {
+      nome: nome,
+      descricao: descricao,
+      valor: valor
+    };
+
+    produtos.push(novoProduto);
+atualizarTabela();
+  }
+}
+
+
+function atualizarTabela() {
+  var divProdutos = document.getElementById("produtos");
+  divProdutos.innerHTML = "";
+  for (var i = 0; i < produtos.length; i++) {
+    var novoElemento = document.createElement("p");
+    novoElemento.textContent = produtos[i].id + " : " + produtos[i].nome + " : "+ produtos[i].descricao + " : "+ produtos[i].valor ;
+    divProdutos.appendChild(novoElemento);
+  }
+
+}
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="tela1" style="margin-bottom: 10px">
+      <h1>
+        Cadastro de produtos
+      </h1>
+      <div class="input-container">
+        <label for="valor1">Nome</label>
+        <input id="valor1" type="text" />
+      </div>
+      <div class="input-container">
+        <label for="valor2">Descrição</label>
+        <input id="valor2" type="text" />
+      </div>
+      <div class="input-container">
+        <label for="valor3">Valor</label>
+        <input id="valor3" type="number" />
+      </div>
+      <div class="input-container">
+        <input type="submit" value="Enviar" onclick="adicionarProduto()" />
+      </div>
+    </div>
+
+    <div>
+      <table id="tabela-produtos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

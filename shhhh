@@ -1,3 +1,5 @@
+const produtos = [];
+
 function adicionarProduto() {
   const nomeInput = document.getElementById('valor1');
   const descricaoInput = document.getElementById('valor2');
@@ -9,29 +11,26 @@ function adicionarProduto() {
 
   if (nome && descricao && valor) {
     const novoProduto = {
-      id: produtos.length + 1,
       nome: nome,
       descricao: descricao,
       valor: valor
     };
 
     produtos.push(novoProduto);
-    console.log('Produto adicionado:', novoProduto);
-
-    // Limpar os inputs
-    nomeInput.value = '';
-    descricaoInput.value = '';
-    valorInput.value = '';
-		
-    var divProdutos = document.getElementById("produtos");
-  	
-    var novoElemento = document.createElement("p");
-
-    // Define o texto do novo elemento como o valor atual do array
-    novoElemento.textContent = (produtos.length + 1) + " : " + nome + " : "  + descricao + " : " + valor;
-
-    // Adiciona o novo elemento na div de produtos
-    divProdutos.appendChild(novoElemento);
-  
+atualizarTabela();
   }
 }
+
+
+function atualizarTabela() {
+  var divProdutos = document.getElementById("produtos");
+  divProdutos.innerHTML = "";
+  for (var i = 0; i < produtos.length; i++) {
+    var novoElemento = document.createElement("p");
+    novoElemento.textContent = produtos[i].id + " : " + produtos[i].nome + " : "+ produtos[i].descricao + " : "+ produtos[i].valor ;
+    divProdutos.appendChild(novoElemento);
+  }
+
+}
+
+
